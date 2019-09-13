@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/crypto-widget.esm.js"></script>
+  <script nomodule src="/build/crypto-widget.js"></script>
+
+</head>
+<body>
+    <crypto-view apikey="fd937be4428d64cf4dd1b51146aef28e46d224aea7ea5bdfbbb6d296a05ec1a9"></crypto-view>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const cryptoView = document.querySelector('crypto-view');
+
+            setTimeout(() => {
+                cryptoView.refreshCryptoData();
+            }, 2000);
+        })
+    </script>
+</body>
+</html>

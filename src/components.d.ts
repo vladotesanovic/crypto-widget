@@ -20,7 +20,7 @@ export namespace Components {
     /**
     * Valid API key obtained from cryptocompare.com
     */
-    'apikey': string;
+    'apiKey': string;
     'refreshCryptoData': () => Promise<void>;
   }
 }
@@ -64,7 +64,7 @@ declare namespace LocalJSX {
     /**
     * Valid API key obtained from cryptocompare.com
     */
-    'apikey'?: string;
+    'apiKey'?: string;
   }
 
   interface IntrinsicElements {

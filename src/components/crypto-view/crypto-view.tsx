@@ -12,7 +12,7 @@ export class CryptoView {
   /**
    * Valid API key obtained from cryptocompare.com
    */
-  @Prop() apikey: string;
+  @Prop() apiKey: string;
 
   @State() cryptoData: CryptoInterface;
 
@@ -23,7 +23,7 @@ export class CryptoView {
   }
 
   fetchData() {
-    getCryptoData(this.apikey).then((data) => {
+    getCryptoData(this.apiKey).then((data) => {
       this.cryptoData = data;
     });
   }
@@ -39,6 +39,7 @@ export class CryptoView {
         <b>Crypto data on date: {new Date().toLocaleDateString()}</b>
         <crypto-table cryptoData={this.cryptoData} cryptoCurrencies={this.cryptoCurrencies} />
         <crypto-refresher onRefreshCryptoData={() => this.fetchData()} />
+        <div>hello</div>
         <slot></slot>
       </Host>
     );
